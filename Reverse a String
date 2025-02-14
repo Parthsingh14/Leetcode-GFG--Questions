@@ -1,0 +1,36 @@
+//GFG Question when string is given
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        // Reverse the string str
+        String ch="";
+        for(int i=str.length()-1;i>=0;i--)
+        {
+            ch=ch+str.charAt(i);
+        }
+        return ch;
+        
+    }
+}
+
+//optimized approch using while loop O(n/2) = O(n)
+//Leetcode Question when the string is given in character array
+class Solution {
+    public void reverseString(char[] s) {
+        int i = 0;
+        int j = s.length - 1;
+        char value;
+
+        while(i<j){
+           value = s[i];
+           s[i] = s[j];
+           s[j] = value;
+
+           i++;
+           j--;
+        }
+    }
+}
